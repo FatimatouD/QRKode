@@ -661,10 +661,7 @@ button {
 input.email_text::placeholder {
     color: #7c2c0c;
 }
-.body-content{
-    
-  
-}
+
 .form_menu{
     width: 100%;
     float: left;
@@ -704,7 +701,17 @@ input.form_menu::placeholder {
     color: #7c2c0c;
     background-color: transparent;
 }
-
+.shop{
+    width: 100%;
+    float: left;
+    background-color: transparent;
+    padding: 8px 15px;
+    color: black;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 100px;
+    
+}
 
 /* newsletter section ens */
 

@@ -19,7 +19,7 @@
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
       <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="icon" href="images/TeSDZx01.svg" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
@@ -28,6 +28,7 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      
    </head>
    <body>
       <!-- header section start -->
@@ -50,10 +51,13 @@
                         <a class="nav-link" href="design.html">Produits</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Shop</a>
+                        <a class="nav-link" href="commande.html">Commande</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="generator.html">Generator</a>
                      </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
@@ -72,13 +76,45 @@
       <div class="newsletter_section layout_padding">
          <div class="container">
             <div class="row">
-               <div class="col-md-6">
-                  <div class="imgage_6"><img src="images/img-6.png"></div>
+               <div class="col-md-4">
+                  <div class="imgage_6" style="height: 800px; width: 800px;"><img src="immm/qrimprim.jpeg"></div>
                </div>
                <div class="col-md-6">
-                  <h1 class="newsletter_taital">Abonnez-vous à la newsletter</h1>
+                 <!-- <h1 class="newsletter_taital">Abonnez-vous à la newsletter</h1>
                   <input type="text" class="email_text" placeholder="Saisissez votre email" name="Enter Your Email">
-                  <div class="subscribe_bt"><a href="#">S'abonner</a></div>
+                  <div class="subscribe_bt"><a href="#">S'abonner</a></div>--> 
+                  <form action="/traiter-commande" method="post" class="shop">
+                     <!-- Nom et prénom -->
+                     <label for="nom">Nom :</label>
+                     <input type="text" id="nom" name="nom" required>
+                     <label for="prenom">Prénom :</label>
+                     <input type="text" id="prenom" name="prenom" required>
+                 
+                     <!-- Adresse -->
+                     <label for="adresse">Adresse :</label>
+                     <textarea id="adresse" name="adresse" required></textarea>
+                 
+                     <!-- Produit à commander -->
+                     <label for="produit">Produit à commander :</label>
+                     <select id="produit" name="produit" required>
+                       <option value="produit1">Produit 1</option>
+                       <option value="produit2">Produit 2</option>
+                       <!-- Ajoutez d'autres options en fonction de vos produits -->
+                 
+                     </select>
+                 
+                     <!-- Quantité -->
+                     <label for="quantite">Quantité :</label>
+                     <input type="number" id="quantite" name="quantite" min="1" required>
+                 
+                     <!-- Méthode de paiement -->
+                     <label>Méthode de paiement :</label>
+                     <input type="radio" id="paiement-cb" name="paiement" value="cb" required>
+                     <label for="paiement-cb">Paiement à Réception</label>
+                     <!-- Bouton de soumission -->
+                     <button type="submit">Passer la commande</button>
+                   </form>
+                 
                </div>
             </div>
          </div>
